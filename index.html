@@ -41,8 +41,8 @@
     </div>
 
     <div class="input-field">
-      <label for="time">Time</label>
-      <input class="number" list="time" name="time" />
+      <label for="period">Period</label>
+      <input class="time" list="time" name="time" id="period"/>
       <datalist id="time">
         <option value="Weekly"></option>
         <option value="Monthly"></option>
@@ -53,7 +53,7 @@
       class="button"
       type="button"
       value="Generate Estimates"
-      onclick="incomeOverTime()"
+      onclick="incomeOverTime(rate(), time())"
     />
   </body>
 </html>

@@ -24,9 +24,28 @@ function totalProduction() {
       return totalDailyAmount;
 }
 
+function rate() {
+      var rate = document.getElementById("rate").value;
+      rate = parseFloat(rate);
+      return rate;
+}
 
+function time() {
+      if (document.getElementById("period").value == "Weekly") {
+            period = 7;
+      } else if (document.getElementById("period").value == "Monthly") {
+            var period = 30;
+      } else if (document.getElementById("period").value == "Annual") {
+            var period = 365;
+      } else {
+            var period = document.getElementById("period").value;
+            period = parseInt(period);
+      }
+      return period;
+}
 
-function incomeOverTime(selling_price, time){
-      var income = selling_price * totalProduction() * time;
+function incomeOverTime(sellingPrice, time) {
+      var income = sellingPrice * totalProduction() * time;
+      console.log("Estimated income for the selected period is " + income);
 
 }

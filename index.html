@@ -8,6 +8,7 @@
 
   <body>
     <h1>Dairy Business</h1>
+    <h3>Production</h3>
     <p>Enter the daily production per shed:</p>
     <div class="input-field">
       <label for="shed_A">Shed A</label>
@@ -18,13 +19,41 @@
       <input class="number" type="text" id="shed_B" name="shed_B" />
     </div>
     <div class="input-field">
-      <label for="shed_A">Shed C</label>
+      <label for="shed_C">Shed C</label>
       <input class="number" type="text" id="shed_C" name="shed_C" />
     </div>
     <div class="input-field">
       <label for="shed_D">Shed D</label>
       <input class="number" type="text" id="shed_D" name="shed_D" />
     </div>
-    <input class="button" type="button" value="Generate Report" onclick="totalProduction()">
+    <input
+      class="button"
+      type="button"
+      value="Generate Report"
+      onclick="totalProduction()"
+    />
+
+    <h3>Income Estimates</h3>
+    <p>Income rates are based on current production.</p>
+    <div class="input-field">
+      <label for="rate">Rate</label>
+      <input class="number" type="text" id="rate" name="rate" />
+    </div>
+
+    <div class="input-field">
+      <label for="time">Time</label>
+      <input class="number" list="time" name="time" />
+      <datalist id="time">
+        <option value="Weekly"></option>
+        <option value="Monthly"></option>
+        <option value="Annual"></option>
+      </datalist>
+    </div>
+    <input
+      class="button"
+      type="button"
+      value="Generate Estimates"
+      onclick="incomeOverTime()"
+    />
   </body>
 </html>

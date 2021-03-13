@@ -1,53 +1,81 @@
 body {
-      background-color: #eff3f2;
-      background: url('c1.jpg') no-repeat fixed 100% 100%;
-      background-size: 100% 100%;
-      background-repeat: no-repeat;
-      max-width: 900px;
-      margin: 0 auto;
-      margin-top: 60px;
-      margin-bottom: 50px;
-}
-
-.main {
-      background-color: rgb(219, 239, 248);
-      border: 1px solid grey;
-      border-radius: 5px;
-      box-shadow: 0px 0px 2px navy;
-      max-width: 100%;
-      height: 600px;
-}
-
-h1 {
-      text-align: center;
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-      color: navy;
+      background-image: url(/img/bg.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
 }
 
-#button {
-      height: 34px;
-      border-radius: 5px;
-      width: 190px;
-      color: oldlace;
-      background-color: navy;
+.layer {
+      background-color: rgba(248, 247, 216, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+.content{
+      width: 25%;
+
+}
+h1{
+      display: flex;
+      position: relative;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+      width: 100%;
+      height: 200px;
+      justify-content: center;
+      align-items: center;
+      font-size: 70px; 
+      color: #5375b4;     
+}
+h3{
+      color: #5375b4;
+}
+.input-field{
+      padding: 5px;
+      text-align: right;
+}
+
+label{
+      padding-right: 20px;
+}
+
+input{
+      background-color: whitesmoke;
       border: none;
-
+      border-radius: 5px;
+      height: 25px;
 }
 
-.btns {
-      float: right;
-      padding-right: 50px;
-      padding-top: 100px;
-
+#button{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 }
 
-#inputText {
-      height: 35px;
-      width: 190px;
+.button{
+      text-align: center;
+      background-color: #5375b4;
+      height: 40px;
+      width: 99%;
+      border: none;
+      margin-top: 30px;
+      border-radius: 5px;
+      font-weight: bold;
+      color: white;
+      box-shadow: 2px 2px 4px gray;
+      font-size: 15px;
+      text-transform: uppercase;
 }
-
-.inpDisp {
-      float: left;
-      padding-left: 50px;
-      padding-top: 100px;
+.button:hover{
+      background-color: hsl(219, 39%, 60%);
+      width: 100%;
+      height: 42px;
 }

@@ -1,59 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Dairy Business</title>
+    <title>Peter Ken Farm</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
     <script src="js/script.js"></script>
   </head>
 
   <body>
-    <h1>Dairy Business</h1>
-    <h3>Production</h3>
-    <p>Enter the daily production per shed:</p>
-    <div class="input-field">
-      <label for="shed_A">Shed A</label>
-      <input class="number" type="text" id="shed_A" name="shed_A" />
-    </div>
-    <div class="input-field">
-      <label for="shed_B">Shed B</label>
-      <input class="number" type="text" id="shed_B" name="shed_B" />
-    </div>
-    <div class="input-field">
-      <label for="shed_C">Shed C</label>
-      <input class="number" type="text" id="shed_C" name="shed_C" />
-    </div>
-    <div class="input-field">
-      <label for="shed_D">Shed D</label>
-      <input class="number" type="text" id="shed_D" name="shed_D" />
-    </div>
-    <input
-      class="button"
-      type="button"
-      value="Generate Report"
-      onclick="totalProduction()"
-    />
+    <div class="layer">
+      <h1>Peter Ken Farm</h1>
 
-    <h3>Income Estimates</h3>
-    <p>Income rates are based on current production.</p>
-    <div class="input-field">
-      <label for="rate">Rate</label>
-      <input class="number" type="text" id="rate" name="rate" />
-    </div>
+      <div class="content">
+        <h3>Production</h3>
+        <p>Enter the daily production per shed:</p>
+        <div class="input-field">
+          <label for="shed_A">Shed A</label>
+          <input class="number" type="text" id="shed_A" name="shed_A" />
+        </div>
+        <div class="input-field">
+          <label for="shed_B">Shed B</label>
+          <input class="number" type="text" id="shed_B" name="shed_B" />
+        </div>
+        <div class="input-field">
+          <label for="shed_C">Shed C</label>
+          <input class="number" type="text" id="shed_C" name="shed_C" />
+        </div>
+        <div class="input-field">
+          <label for="shed_D">Shed D</label>
+          <input class="number" type="text" id="shed_D" name="shed_D" />
+        </div>
 
-    <div class="input-field">
-      <label for="period">Period</label>
-      <input class="time" list="time" name="time" id="period"/>
-      <datalist id="time">
-        <option value="Weekly"></option>
-        <option value="Monthly"></option>
-        <option value="Annual"></option>
-      </datalist>
+        <h3>Income Estimates</h3>
+        <p>Income estimates are based on current production.</p>
+        <div class="input-field">
+          <label for="rate">Rate</label>
+          <input class="number" type="text" id="rate" name="rate" />
+        </div>
+
+        <div class="input-field">
+          <label for="period">Period</label>
+          <input class="time" list="time" name="time" id="period" />
+          <datalist id="time">
+            <option value="Weekly"></option>
+            <option value="Monthly"></option>
+            <option value="Annual"></option>
+          </datalist>
+        </div>
+        <div id="button">
+        <input
+          class="button"
+          type="button"
+          value="Generate"
+          onclick="incomeOverTime(rate(), time())"
+        />
+        </div>
+      </div>
     </div>
-    <input
-      class="button"
-      type="button"
-      value="Generate Estimates"
-      onclick="incomeOverTime(rate(), time())"
-    />
   </body>
 </html>

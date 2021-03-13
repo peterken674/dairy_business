@@ -21,6 +21,7 @@ function totalProduction() {
       console.log("Production in shed C is " + c + " litres per day.");
       console.log("Production in shed D is " + d + " litres per day.");
       console.log("The total production is " + totalDailyAmount + " litres per day.");
+
       return totalDailyAmount;
 }
 
@@ -41,11 +42,33 @@ function time() {
             var period = document.getElementById("period").value;
             period = parseInt(period);
       }
+
       return period;
 }
 
 function incomeOverTime(sellingPrice, time) {
       var income = sellingPrice * totalProduction() * time;
       console.log("Estimated income for the selected period is " + income);
+}
 
+function leapYear(){
+      var days = {
+            January: 31,
+            February: 29,
+            March: 31,
+            April: 30,
+            May: 31,
+            June: 30,
+            July: 31,
+            August: 31,
+            September: 30,
+            October: 31,
+            November: 30,
+            December: 31
+      };
+      var totalDailyAmount = totalProduction();
+      for (var [key, value] of Object.entries(days)){
+            var earnings = `${value}` * totalDailyAmount;
+            console.log("Your income for " + `${key}` + " is " + earnings);
+      }
 }

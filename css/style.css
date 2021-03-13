@@ -7,7 +7,7 @@ body {
 }
 
 .layer {
-      background-color: rgba(248, 247, 216, 0.4);
+      background-color: rgba(230, 230, 230, 0.5);
       position: absolute;
       top: 0;
       left: 0;
@@ -18,7 +18,7 @@ body {
       align-items: center;
 }
 .content{
-      width: 25%;
+      width: 500px;
 }
 h1{
       display: flex;

@@ -38,7 +38,7 @@
 
         <div class="input-field">
           <label for="period">Period (days)</label>
-          <input class="time" list="time" name="time" id="period" value="0"/>
+          <input class="time" list="time" name="time" id="period"/>
           <datalist id="time">
             <option value="Weekly"></option>
             <option value="Monthly"></option>
@@ -49,10 +49,11 @@
         <input
           class="button"
           type="button"
-          value="Generate"
-          onclick="display(); incomeOverTime(rate(), time()); leapYear();"
+          value="Generate report"
+          onclick="display();"
         />
         </div>
+        <p id="alert"><em>*This program currently shows the output on the console.</em></p>
       </div>
     </div>
   </body>

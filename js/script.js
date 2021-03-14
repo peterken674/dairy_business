@@ -1,4 +1,3 @@
-
 function collectData() {
       //Array to store the values entered.
       var amounts = [];
@@ -11,7 +10,7 @@ function collectData() {
       return amounts;
 }
 
-function totalProduction(){
+function totalProduction() {
       var [a, b, c, d] = collectData();
 
       //Convert to numbers.
@@ -19,13 +18,14 @@ function totalProduction(){
       b = parseFloat(b);
       c = parseFloat(c);
       d = parseFloat(d);
-      var totalDailyAmount =  a + b + c + d;
+      var totalDailyAmount = a + b + c + d;
 
       // document.getElementById("a").innerHTML = "Hello";
       return totalDailyAmount;
 }
 
-function display(){
+function display() {
+      console.clear();
       var [a, b, c, d] = collectData();
 
       console.log("Production in shed A is " + a + " litres per day.");
@@ -33,6 +33,9 @@ function display(){
       console.log("Production in shed C is " + c + " litres per day.");
       console.log("Production in shed D is " + d + " litres per day.");
       console.log("The total production is " + totalProduction() + " litres per day.");
+      console.log("");
+
+      incomeOverTime(rate(), time());
 }
 
 function rate() {
@@ -42,26 +45,33 @@ function rate() {
 }
 
 function time() {
-      if (document.getElementById("period").value == "Weekly") {
+      var time = document.getElementById("period").value;
+      if (time == "Weekly") {
             period = 7;
-      } else if (document.getElementById("period").value == "Monthly") {
+      } else if (time == "Monthly") {
             var period = 30;
-      } else if (document.getElementById("period").value == "Annual") {
+      } else if (time == "Annual") {
             var period = 365;
       } else {
             var period = document.getElementById("period").value;
             period = parseInt(period);
       }
-
       return period;
 }
 
 function incomeOverTime(sellingPrice, time) {
       var income = sellingPrice * totalProduction() * time;
-      console.log("Estimated income for the selected period is " + income);
+      if (isNaN(income)) {
+            alert("Please enter or select a period.");
+            return;
+      } else {
+            console.log("Estimated income for the selected period is " + income);
+            console.log("");
+            leapYear();
+      }
 }
 
-function leapYear(){
+function leapYear() {
       var days = {
             January: 31,
             February: 29,
@@ -77,7 +87,8 @@ function leapYear(){
             December: 31
       };
       var totalDailyAmount = totalProduction();
-      for (var [key, value] of Object.entries(days)){
+      console.log("LEAP YEAR")
+      for (var [key, value] of Object.entries(days)) {
             var earnings = `${value}` * totalDailyAmount;
             console.log("Your income for " + `${key}` + " is " + earnings);
       }

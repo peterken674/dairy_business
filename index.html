@@ -3,7 +3,6 @@
   <head>
     <title>Peter Ken Farm</title>
     <link rel="stylesheet" href="css/style.css" type="text/css" />
-    <script src="js/script.js"></script>
   </head>
 
   <body>
@@ -15,31 +14,31 @@
         <p>Enter the daily production per shed:</p>
         <div class="input-field">
           <label for="shed_A">Shed A</label>
-          <input class="number" type="text" id="shed_A" name="shed_A" />
+          <input class="number" type="text" id="shed_A" name="shed_A" value="0"/>
         </div>
         <div class="input-field">
           <label for="shed_B">Shed B</label>
-          <input class="number" type="text" id="shed_B" name="shed_B" />
+          <input class="number" type="text" id="shed_B" name="shed_B" value="0"/>
         </div>
         <div class="input-field">
           <label for="shed_C">Shed C</label>
-          <input class="number" type="text" id="shed_C" name="shed_C" />
+          <input class="number" type="text" id="shed_C" name="shed_C" value="0"/>
         </div>
         <div class="input-field">
           <label for="shed_D">Shed D</label>
-          <input class="number" type="text" id="shed_D" name="shed_D" />
+          <input class="number" type="text" id="shed_D" name="shed_D" value="0"/>
         </div>
 
         <h3>Income Estimates</h3>
         <p>Income estimates are based on current production.</p>
         <div class="input-field">
           <label for="rate">Rate (per litre)</label>
-          <input class="number" type="text" id="rate" name="rate" />
+          <input class="number" type="text" id="rate" name="rate" value="0"/>
         </div>
 
         <div class="input-field">
           <label for="period">Period (days)</label>
-          <input class="time" list="time" name="time" id="period" />
+          <input class="time" list="time" name="time" id="period" value="0"/>
           <datalist id="time">
             <option value="Weekly"></option>
             <option value="Monthly"></option>
@@ -51,10 +50,11 @@
           class="button"
           type="button"
           value="Generate"
-          onclick="incomeOverTime(rate(), time()); leapYear(); location.href='report.html'"
+          onclick="display(); incomeOverTime(rate(), time()); leapYear();"
         />
         </div>
       </div>
     </div>
   </body>
+      <script src="js/script.js"></script>
 </html>

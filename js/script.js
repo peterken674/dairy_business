@@ -1,4 +1,5 @@
-function totalProduction() {
+
+function collectData() {
       //Array to store the values entered.
       var amounts = [];
 
@@ -7,22 +8,31 @@ function totalProduction() {
       amounts.push(document.getElementById("shed_C").value);
       amounts.push(document.getElementById("shed_D").value);
 
-      var [a, b, c, d] = amounts;
+      return amounts;
+}
+
+function totalProduction(){
+      var [a, b, c, d] = collectData();
 
       //Convert to numbers.
       a = parseFloat(a);
       b = parseFloat(b);
       c = parseFloat(c);
-      d = parseFloat(c);
+      d = parseFloat(d);
       var totalDailyAmount =  a + b + c + d;
+
+      // document.getElementById("a").innerHTML = "Hello";
+      return totalDailyAmount;
+}
+
+function display(){
+      var [a, b, c, d] = collectData();
 
       console.log("Production in shed A is " + a + " litres per day.");
       console.log("Production in shed B is " + b + " litres per day.");
       console.log("Production in shed C is " + c + " litres per day.");
       console.log("Production in shed D is " + d + " litres per day.");
-      console.log("The total production is " + totalDailyAmount + " litres per day.");
-
-      return totalDailyAmount;
+      console.log("The total production is " + totalProduction() + " litres per day.");
 }
 
 function rate() {

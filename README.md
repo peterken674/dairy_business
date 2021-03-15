@@ -3,10 +3,12 @@
 #### By **Peter Kennedy**
 ## Description
 Peter Ken Dairy farm website for tracking milk production and sale to Brookside. The site also provides estimate on how much one would earn on each month in a leap year using the given rates and daily production per shed.
+![Landing page](img/img1.png)
 ## Setup/Installation
 To view the website, go to [peterken674.github.io/anitas-kitchen](https://peterken674.github.io/dairy_business). 
 1. Open your web browser, preferrably Google Chrome.
-2. Open the browser console using Ctrl + Shift + I
+2. Open the browser console using Ctrl + Shift + I.
+![Site with console](img/img2.png)
 3. Fill the fields indicated on the site respectively.
 4. When done filling all the fields, click on generate report button and observe the results.
 ## Known Bugs
